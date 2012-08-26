@@ -15,6 +15,10 @@ Comparing possible your server and WP Booster of display speed for image.
 
 This plugin allow you to Comparing possible your server and WP Booster of display speed for image.
 
+Please add a short code to the post like below.
+
+[wpbooster_speed_test]
+
 https://github.com/megumiteam/wpboster-speed-test
 
 = Support =
@@ -25,4 +29,6 @@ You can email us at support@wpbooster.net for support.
 
 1. Install The WPBooster CDN Client Plugin either via the WordPress.org plugin directory, or by uploading the files to your server.
 2. Activate the plugin.
-3. Sign up for an account at wpbooster.net and add your site.
+3. Please add a short code to the post like below.
+
+[wpbooster_speed_test]

@@ -4,7 +4,7 @@ $('#speed-test-start').click(function(){
     $('#booster-stopped').html('');
     $('#booster-running').html('');
     var d = new Date();
-    var path = content_url+'/plugins/wpbooster-speed-test/test-images/img_r{0}_c{1}.png?ver=';
+    var path = plugins_url+'/test-images/img_r{0}_c{1}.png?ver=';
     var booster = 'http://demo.wpbooster.net/test-images/default/img_r{0}_c{1}.png?ver=';
     for (var i=1; i<=10; i++) {
         for (var j=1; j<=10; j++) {

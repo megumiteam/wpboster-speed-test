@@ -65,8 +65,8 @@ public function shortcode()
 
 public function wp_footer()
 {
-    $script = "<script type=\"text/javascript\">var content_url = '%s';</script>";
-    printf($script, esc_html(content_url()));
+    $script = "<script type=\"text/javascript\">var plugins_url = '%s';</script>";
+    printf($script, esc_html(plugins_url('', __FILE__)));
 }
 
 }

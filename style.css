@@ -81,3 +81,48 @@
     text-align: center;
 }
 
+#speed-test-admin #wpbooster-speed-test
+{
+    width: 580px;
+    margin: 5em auto;
+    overflow: auto;
+}
+
+#speed-test-admin h2
+{
+    font-size: 32px;
+    margin: 1em 0 1.5em 0;
+    background-image: url(img/h2.png);
+    background-repeat: no-repeat;
+    height: 311px;
+    text-indent: -9999px;
+}
+
+#speed-test-admin p
+{
+    font-size: 18px;
+    color: #777777;
+    line-height: 1.4em;
+}
+
+#speed-test-admin
+{
+    width: 800px;
+}
+
+#speed-test-admin #speed-test-start
+{
+    margin: 0 auto;
+}
+
+#speed-test-admin #get-booster
+{
+    display: none;
+}
+
+#speed-test-admin pre
+{
+    font-size: 16px;
+    color: #999999;
+}
+

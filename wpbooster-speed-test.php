@@ -1,8 +1,10 @@
 <?php
 /*
 Plugin Name: WP Booster Speed Test
-Description: WP Booster Speed Test
+Description: You can compare the display speed of images between your server and WP Booster.
 Author: Digital Cube Co.,Ltd (Takayuki Miyauchi)
+Version: 1.1.0
+Author URI: http://wpbooster.net/
 Domain Path: /languages
 Text Domain: wpbooster-speed-test
 */
@@ -15,9 +17,38 @@ class WPBoosterDemo {
 function __construct()
 {
     add_action("plugins_loaded", array(&$this, "plugins_loaded"));
-    add_action("wp_enqueue_scripts", array(&$this, "wp_enqueue_scripts"));
+    add_action("wp_enqueue_scripts", array(&$this, "enqueue_style"));
     add_shortcode("wpbooster_speed_test", array(&$this, 'shortcode'));
     add_filter('plugin_row_meta',   array(&$this, 'plugin_row_meta'), 10, 2);
+    add_action("admin_menu", array(&$this, "admin_menu"));
+}
+
+
+public function admin_menu()
+{
+    $hook = add_menu_page(
+        "Speed Test",
+        "Speed Test",
+        "update_core",
+        "nginx-champuru",
+        array(&$this, "admin_panel"),
+        plugins_url('img/icon.png', __FILE__),
+        "3"
+    );
+    add_action('admin_print_styles-'.$hook, array(&$this, 'enqueue_style'));
+}
+
+
+public function admin_panel()
+{
+    $html = $this->shortcode();
+    echo '<div class="wrap" id="speed-test-admin">';
+    echo '<h2>'.__("WP Booster Speed Test", "wpbooster-speed-test").'</h2>';
+    echo '<p>'.__('You can compare the display speed of images between your server and <a href="http://wpbooster.net/">WP Booster</a>.', 'wpbooster-speed-test').'</p>';
+    echo '<p>'.__('Please copy &amp; paste shortcode in the editor like below, if you want to display speed test on your post.', 'wpbooster-speed-test').'</p>';
+    echo '<pre>[wpbooster_speed_test]</pre>';
+    echo $html;
+    echo '</div>';
 }
 
 public function plugins_loaded()
@@ -29,7 +60,9 @@ public function plugins_loaded()
     );
 }
 
-public function wp_enqueue_scripts()
+
+
+public function enqueue_style()
 {
     wp_enqueue_style(
         'wpbooster-speed-test',
@@ -41,16 +74,10 @@ public function wp_enqueue_scripts()
 
 public function shortcode()
 {
-
-    wp_enqueue_script(
-        'wpbooster-speed-test',
-        plugins_url('speed-test.js', __FILE__),
-        array('jquery'),
-        filemtime(dirname(__FILE__).'/speed-test.js'),
-        true
-    );
+    $this->enqueue_script();
 
     add_action("wp_footer", array(&$this, "wp_footer"));
+    add_action("admin_footer", array(&$this, "wp_footer"));
 
     $div = '<div id="%s"></div>';
     $html = '<div id="wpbooster-speed-test">';
@@ -61,6 +88,18 @@ public function shortcode()
     $html .= '<a id="speed-test-start" class="btn-fire">Booster Fire!</a>';
     $html .= '<p id="get-booster"><a href="http://ja.wpbooster.net/">Get WP Booster</a></p>';
     return $html;
+}
+
+
+public function enqueue_script()
+{
+    wp_enqueue_script(
+        'wpbooster-speed-test',
+        plugins_url('speed-test.js', __FILE__),
+        array('jquery'),
+        filemtime(dirname(__FILE__).'/speed-test.js'),
+        true
+    );
 }
 
 

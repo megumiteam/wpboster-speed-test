@@ -1,13 +1,13 @@
-=== The WP Booster CDN Client ===
+=== WP Booster Speed Test ===
 Contributors: miyauchi
 Tags: wpbooster, CDN, cloudfront
 Requires at least: 3.4
 Tested up to: 3.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Comparing possible your server and WP Booster of display speed for image.
+You can compare the display speed of images between your server and WP Booster.
 
 == Description ==
 

@@ -17,6 +17,7 @@ function __construct()
     add_action("plugins_loaded", array(&$this, "plugins_loaded"));
     add_action("wp_enqueue_scripts", array(&$this, "wp_enqueue_scripts"));
     add_shortcode("wpbooster_speed_test", array(&$this, 'shortcode'));
+    add_filter('plugin_row_meta',   array(&$this, 'plugin_row_meta'), 10, 2);
 }
 
 public function plugins_loaded()
@@ -67,6 +68,18 @@ public function wp_footer()
 {
     $script = "<script type=\"text/javascript\">var plugins_url = '%s';</script>";
     printf($script, esc_html(plugins_url('', __FILE__)));
+}
+
+
+public function plugin_row_meta($links, $file)
+{
+    $pname = plugin_basename(__FILE__);
+    if ($pname === $file) {
+        $link = '<a href="%s">%s</a>';
+        $url = __("http://wpbooster.net/", 'logo-customizer');
+        $links[] = sprintf($link, esc_url($url), __("Make WordPress Site Load Faster", "logo-customizer"));
+    }
+    return $links;
 }
 
 }

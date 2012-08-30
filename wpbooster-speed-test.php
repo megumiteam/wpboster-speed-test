@@ -3,7 +3,7 @@
 Plugin Name: WP Booster Speed Test
 Description: You can compare the display speed of images between your server and WP Booster.
 Author: Digital Cube Co.,Ltd (Takayuki Miyauchi)
-Version: 1.3.0
+Version: 1.4.0
 Author URI: http://wpbooster.net/
 Domain Path: /languages
 Text Domain: wpbooster-speed-test
@@ -33,7 +33,7 @@ public function admin_menu()
         "wpbooster-speed-test",
         array(&$this, "admin_panel"),
         plugins_url('img/icon.png', __FILE__),
-        "3"
+        9999
     );
     add_action('admin_print_styles-'.$hook, array(&$this, 'enqueue_style'));
 }
@@ -79,11 +79,13 @@ public function shortcode()
     add_action("wp_footer", array(&$this, "wp_footer"));
     add_action("admin_footer", array(&$this, "wp_footer"));
 
-    $div = '<div id="%s"></div>';
-    $html = '<div id="wpbooster-speed-test">';
-    $html .= sprintf($div, 'booster-stopped');
-    $html .= sprintf($div, 'booster-running');
-    $html .= '</div>';
+    $html = '<table id="wpbooster-speed-test"><tr><th>';
+    $html .= __("Before using the WP Booster", "wpbooster-speed-test");
+    $html .= "</th><th>";
+    $html .= __("After using the WP Booster", "wpbooster-speed-test");
+    $html .= "</th></tr><tr><td id=\"booster-stopped\">";
+    $html .= "</td><td id=\"booster-running\">";
+    $html .= '</td></tr></table>';
 
     $html .= '<a id="speed-test-start" class="btn-fire">Booster Fire!</a>';
     $html .= '<p id="get-booster"><a href="http://ja.wpbooster.net/">Get WP Booster</a></p>';
@@ -115,8 +117,8 @@ public function plugin_row_meta($links, $file)
     $pname = plugin_basename(__FILE__);
     if ($pname === $file) {
         $link = '<a href="%s">%s</a>';
-        $url = __("http://wpbooster.net/", 'logo-customizer');
-        $links[] = sprintf($link, esc_url($url), __("Make WordPress Site Load Faster", "logo-customizer"));
+        $url = __("http://wpbooster.net/", 'wpbooster-speed-test');
+        $links[] = sprintf($link, esc_url($url), __("Make WordPress Site Load Faster", "wpbooster-speed-test"));
     }
     return $links;
 }

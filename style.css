@@ -6,20 +6,15 @@
 #booster-stopped,
 #booster-running
 {
-    width: 250px;
-    height: 250px;
-    border: 10px solid #dedede;;
 }
 
 #booster-stopped
 {
-    float: left;
     background-image: url(img/notrunning.png);
 }
 
 #booster-running
 {
-    float: right;
     background-image: url(img/running.png);
 }
 
@@ -83,9 +78,23 @@
 
 #speed-test-admin #wpbooster-speed-test
 {
-    width: 580px;
     margin: 5em auto;
-    overflow: auto;
+    border-collapse:separate;
+    border-spacing:8px;
+}
+
+#speed-test-admin #wpbooster-speed-test th
+{
+    text-align: left;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+#speed-test-admin #wpbooster-speed-test td
+{
+    width: 250px;
+    height: 250px;
+    border: 10px solid #cccccc;
 }
 
 #speed-test-admin h2

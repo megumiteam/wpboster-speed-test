@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Booster Speed Test 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wpbooster-speed-test\n"
-"POT-Creation-Date: 2012-08-28 06:44:06+00:00\n"
+"POT-Creation-Date: 2012-08-30 15:48:23+00:00\n"
 "PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. #-#-#-#-#  wpbooster-speed-test.pot (WP Booster Speed Test 1.1.0)  #-#-#-#-#
+#. #-#-#-#-#  wpbooster-speed-test.pot (WP Booster Speed Test 1.3.0)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: wpbooster-speed-test.php:46
 msgid "WP Booster Speed Test"
@@ -23,21 +23,33 @@ msgstr "WP Booster スピードテスト"
 msgid ""
 "You can compare the display speed of images between your server and <a href="
 "\"http://wpbooster.net/\">WP Booster</a>."
-msgstr "あなたのサーバーと<a href=\"http://ja.wpbooster.net/\">WP Booster</a>の表示速度を簡単に比較できます。"
+msgstr ""
+"あなたのサーバーと<a href=\"http://ja.wpbooster.net/\">WP Booster</a>の表示速"
+"度を簡単に比較できます。"
 
 #: wpbooster-speed-test.php:48
 msgid ""
 "Please copy &amp; paste shortcode in the editor like below, if you want to "
 "display speed test on your post."
-msgstr "以下のショートコードをエディターにコピペすれば、このスピードテストを記事に表示できます。"
+msgstr ""
+"以下のショートコードをエディターにコピペすれば、このスピードテストを記事に表"
+"示できます。"
 
-#. #-#-#-#-#  wpbooster-speed-test.pot (WP Booster Speed Test 1.1.0)  #-#-#-#-#
+#: wpbooster-speed-test.php:83
+msgid "Before using the WP Booster"
+msgstr "WP Booster 導入前"
+
+#: wpbooster-speed-test.php:85
+msgid "After using the WP Booster"
+msgstr "WP Booster 導入後"
+
+#. #-#-#-#-#  wpbooster-speed-test.pot (WP Booster Speed Test 1.3.0)  #-#-#-#-#
 #. Author URI of the plugin/theme
-#: wpbooster-speed-test.php:118
+#: wpbooster-speed-test.php:120
 msgid "http://wpbooster.net/"
 msgstr "http://ja.wpbooster.net/"
 
-#: wpbooster-speed-test.php:119
+#: wpbooster-speed-test.php:121
 msgid "Make WordPress Site Load Faster"
 msgstr "WordPressを高速化"
 

@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WP Booster Speed Test package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Booster Speed Test 1.1.0\n"
+"Project-Id-Version: WP Booster Speed Test 1.3.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wpbooster-speed-test\n"
-"POT-Creation-Date: 2012-08-28 06:44:06+00:00\n"
+"POT-Creation-Date: 2012-08-30 15:48:23+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#. #-#-#-#-#  wpbooster-speed-test.pot (WP Booster Speed Test 1.1.0)  #-#-#-#-#
+#. #-#-#-#-#  wpbooster-speed-test.pot (WP Booster Speed Test 1.3.0)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: wpbooster-speed-test.php:46
 msgid "WP Booster Speed Test"
@@ -30,13 +30,21 @@ msgid ""
 "display speed test on your post."
 msgstr ""
 
-#. #-#-#-#-#  wpbooster-speed-test.pot (WP Booster Speed Test 1.1.0)  #-#-#-#-#
+#: wpbooster-speed-test.php:83
+msgid "Before using the WP Booster"
+msgstr ""
+
+#: wpbooster-speed-test.php:85
+msgid "After using the WP Booster"
+msgstr ""
+
+#. #-#-#-#-#  wpbooster-speed-test.pot (WP Booster Speed Test 1.3.0)  #-#-#-#-#
 #. Author URI of the plugin/theme
-#: wpbooster-speed-test.php:118
+#: wpbooster-speed-test.php:120
 msgid "http://wpbooster.net/"
 msgstr ""
 
-#: wpbooster-speed-test.php:119
+#: wpbooster-speed-test.php:121
 msgid "Make WordPress Site Load Faster"
 msgstr ""
 

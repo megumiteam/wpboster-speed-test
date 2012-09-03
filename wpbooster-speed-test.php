@@ -3,7 +3,7 @@
 Plugin Name: WP Booster Speed Test
 Description: You can compare the display speed of images between your server and WP Booster.
 Author: Digital Cube Co.,Ltd (Takayuki Miyauchi)
-Version: 1.4.0
+Version: 1.4.1
 Author URI: http://wpbooster.net/
 Domain Path: /languages
 Text Domain: wpbooster-speed-test

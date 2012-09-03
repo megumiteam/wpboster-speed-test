@@ -76,21 +76,21 @@
     text-align: center;
 }
 
-#speed-test-admin #wpbooster-speed-test
+#wpbooster-speed-test
 {
     margin: 5em auto;
     border-collapse:separate;
     border-spacing:8px;
 }
 
-#speed-test-admin #wpbooster-speed-test th
+#wpbooster-speed-test th
 {
     text-align: left;
     font-size: 16px;
     padding: 5px 0;
 }
 
-#speed-test-admin #wpbooster-speed-test td
+#wpbooster-speed-test td
 {
     width: 250px;
     height: 250px;
